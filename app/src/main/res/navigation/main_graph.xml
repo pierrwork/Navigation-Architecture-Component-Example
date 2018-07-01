@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/fragment1">
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="ru.pierrdunn.navigate.Fragment1"
+        android:label="Имя из лейбла 1"
+        tools:layout="@layout/fragment_fragment1" >
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="ru.pierrdunn.navigate.Fragment2"
+        android:label="Имя из лейбла 2"
+        tools:layout="@layout/fragment_fragment2" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment3"
+            app:destination="@id/fragment3"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_fragment2_to_fragment4"
+            app:destination="@id/fragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="ru.pierrdunn.navigate.Fragment3"
+        android:label="Имя из лейбла 3"
+        tools:layout="@layout/fragment_fragment3" >
+        <action
+            android:id="@+id/action_fragment3_to_anotherActivity"
+            app:destination="@id/anotherActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/anotherActivity"
+        android:name="ru.pierrdunn.navigate.AnotherActivity"
+        android:label="activity_another"
+        tools:layout="@layout/activity_another" />
+    <activity
+        android:id="@+id/startActivity2"
+        android:name="ru.pierrdunn.navigate.StartActivity"
+        android:label="activity_start"
+        tools:layout="@layout/activity_start" />
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="ru.pierrdunn.navigate.Fragment4"
+        android:label="fragment_fragment4"
+        tools:layout="@layout/fragment_fragment4" />
+</navigation>
